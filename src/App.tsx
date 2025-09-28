@@ -48,12 +48,21 @@ export default function App() {
             <li><strong>Språk</strong> {skills.languages.join(", ")}</li>
           </ul>
         </section>
-
-
         
       </main>
 
-      
+      <section className="section" id="contact">
+          <h2>Kontakt</h2>
+          <ul className="kv">
+            <li><strong>GitHub</strong> <a href="https://github.com/Brankoov" target="_blank">Brankoov</a></li>
+            <li><strong>E-post</strong> <a href="mailto:branko_nikolic@live.se">branko_nikolic@live.se</a></li>
+            <li><strong>Telefon</strong> 073-732 11 57</li>
+          </ul>
+        </section> 
+
+      <footer className="footer">
+        © {new Date().getFullYear()} Branko. Built with React + Vite.
+      </footer>
     </>
   );
 }
