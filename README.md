@@ -1,11 +1,12 @@
-cat > README.md << 'EOF'
 # Branko Portfolio
 
 Personal developer portfolio built with **React (Vite + TypeScript)**.  
 Deployed to **Azure Static Web Apps** via **GitHub Actions**.
 
+> Cloud-hosted React portfolio with CI/CD on Azure. Built for LIA/job applications.
+
 ## Live
-- URL: _add after first deploy_
+- **URL:** https://wonderful-sand-0a2760403.1.azurestaticapps.net/
 
 ## Features
 - About, Projects with GitHub links, Tech stack, Contact
@@ -22,7 +23,7 @@ Deployed to **Azure Static Web Apps** via **GitHub Actions**.
 3. Auto-deploy runs on each push
 
 ## SPA Fallback
-Create `staticwebapp.config.json`:
+Create `staticwebapp.config.json` in the project root:
 ```json
 {
   "routes": [{ "route": "/*", "serve": "/index.html", "statusCode": 200 }]
