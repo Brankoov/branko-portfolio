@@ -1,0 +1,14 @@
+.card {
+  border: 1px solid #e6e6e9;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.06); transform: translateY(-2px); }
+.card__header { margin-bottom: 8px; }
+.card__title { margin: 0; font-size: 1.1rem; }
+.card__desc { margin: 8px 0 12px; color: #444; line-height: 1.5; }
+.card__tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 12px; }
+.tag { font-size: .8rem; padding: 4px 8px; border-radius: 999px; background: #f2f4f7; }
+.card__link { text-decoration: none; font-weight: 600; }

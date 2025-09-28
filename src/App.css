@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --bg: #0f172a;      /* mörk header */
+  --fg: #ffffff;
+  --ink: #0b1220;     /* text */
+  --muted: #4b5563;
+  --accent: #2563eb;
+  --surface: #f7f7fb;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial; color: var(--ink); background: var(--surface); }
+
+.hero {
+  background: var(--bg);
+  color: var(--fg);
+  padding: 64px 16px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.hero h1 { margin: 0 0 8px; font-size: 2rem; }
+.hero p { margin: 0; color: #c7d2fe; max-width: 60ch; }
+.hero__links { margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff; text-decoration: none; border-radius: 10px; font-weight: 600;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section { padding: 40px 0; }
+.section h2 { margin: 0 0 16px; font-size: 1.5rem; }
+.grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.grid--projects > * { grid-column: span 12; }
+@media (min-width: 720px) {
+  .grid--projects > * { grid-column: span 6; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.kv { display: grid; gap: 8px; margin: 0; padding: 0; }
+.kv li { list-style: none; }
+.kv strong { display: inline-block; width: 200px; color: var(--muted); }
+
+.footer { text-align: center; color: var(--muted); padding: 24px 0 48px; font-size: .9rem; }
+/* Ge sektionerna vit yta ovanpå ljus grå yta */
+.section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+  margin-bottom: 24px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+/* Behåll hero mörk */
+.hero { background: #0f172a; color: #fff; }
+body { background: #0f1115; color: #eaeef5; } /* mörk bakgr + ljus text */
+.section { background: #141821; color: #eaeef5; }
+.card { background: #1a2030; border-color: #25304a; }
+.tag { background: #2a3550; }
