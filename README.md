@@ -8,6 +8,17 @@ Deployed to **Azure Static Web Apps** via **GitHub Actions**.
 ## Live
 - **URL:** https://wonderful-sand-0a2760403.1.azurestaticapps.net/
 
+## Screenshots
+
+**Azure Static Web Apps – Overview**  
+[![Azure SWA Overview](docs/screenshots/swa-overview.png)](docs/screenshots/swa-overview.png)
+
+**GitHub Actions – successful deploy**  
+[![GitHub Actions run](docs/screenshots/actions-success.png)](docs/screenshots/actions-success.png)
+
+**Live site**  
+[![Portfolio live](docs/screenshots/site-home.png)](docs/screenshots/site-home.png)
+
 ## Features
 - About, Projects with GitHub links, Tech stack, Contact
 - Responsive layout, SPA routing
@@ -28,3 +39,4 @@ Create `staticwebapp.config.json` in the project root:
 {
   "routes": [{ "route": "/*", "serve": "/index.html", "statusCode": 200 }]
 }
+```
