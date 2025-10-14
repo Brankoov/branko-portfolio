@@ -1,37 +1,33 @@
 export type Project = {
   title: string;
-  url: string;
-  stack: string[];
   description: string;
+  stack: string[];      // enhetlig nyckel för tekniklista
+  url?: string;         // valfri: t.ex. repo eller huvudsida
+  repo?: string;        // valfri: GitHub-länk
+  live?: string;        // valfri: live-demo
+  image?: string;       // valfri: thumbnail
 };
+
+
+// url/ repo/ live valfria.
 
 export const projects: Project[] = [
   {
-    title: "ATM (SOLID/TDD)",
-    url: "https://github.com/Brankoov/atm-simulator",
-    stack: ["Java", "JUnit 5", "SOLID", "TDD"],
-    description:
-      "Bankomatlogik byggd med SOLID-principer och TDD. Fokus på testbarhet och ren arkitektur.",
-  },
-  {
     title: "Weather Kids Wear",
-    url: "https://github.com/Brankoov/Weatherapp",
-    stack: ["React", "TypeScript", "REST API"],
     description:
-      "Klädrekommendationer för barn baserat på väder. Lättanvänt, responsivt UI.",
-  },
-  {
-    title: "Secure User Portal",
-    url: "https://github.com/Brankoov/SecureSpringProjekt",
-    stack: ["Spring Boot", "Spring Security", "Thymeleaf", "JPA"],
-    description:
-      "Registrering/inloggning, rollbaserad åtkomst, CSRF-skydd och MockMvc-tester.",
+      "Väderdriven rekommendation för barnkläder – React + TypeScript.",
+    stack: ["React", "TypeScript", "Vite"],
+    live: "https://kladerforvader.se/",
+    repo: "https://github.com/Brankoov/Weatherapp", 
+    url: "https://kladerforvader.se/",
   },
   {
     title: "Foodtruck webbpage",
-    url: "https://github.com/Brankoov/FR_UX_Grupp4",
-    stack: ["React", "TypeScript", "Email/API"],
     description:
-      "En enkel Foodtruck hemsida till en existerande foodtruck med Startsida, Om oss, Kontaktformulär",
+      "En enkel Foodtruck-hemsida med startsida, om oss och kontaktformulär.",
+    stack: ["React", "TypeScript", "Vercel"],
+    live: "https://sandysfoodtruck.vercel.app/",
+    repo: "https://github.com/Brankoov/FR_UX_Grupp4",
+    url: "https://sandysfoodtruck.vercel.app/",
   },
 ];

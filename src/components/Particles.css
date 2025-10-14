@@ -1,0 +1,7 @@
+/* Se till att canvasken fyller containern utan layout-jank */
+.relative .ogl-canvas,
+.particles-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

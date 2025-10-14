@@ -1,18 +1,37 @@
 import "./App.css";
+import Particles from "./components/Particles";
 import ProjectCard from "./components/ProjectCard";
+//import ThemeToggle from "./components/ThemeToggle";
 import { projects } from "./data/projects";
 import { skills } from "./data/skills";
-
+import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
+  useReveal();
+
   return (
     <>
-      <header className="hero">
-        <div className="container">
+      <header className="hero hero--with-bg">
+       {/* <ThemeToggle /> {/* liten flytande knapp uppe till höger */}
+
+        <Particles
+          className="hero__bg"
+          particleCount={500}
+          particleSpread={8}
+          speed={0.15}
+          alpha
+          baseSize={80}
+          sizeRandomness={0.5}
+          hoverParallax
+          hoverFactor={0.9}
+          cameraDistance={15}
+        />
+        <div className="container hero__content">
           <h1>Branko – Utvecklare (Java/Spring • React )</h1>
           <p>
-            Bygger tydliga gränssnitt, säkra API:er och schyssta pipelines.
-            Söker LIA/jobb – hör av dig så visar jag mer!
+            Utvecklare med fokus på Java/Spring och React. Jag bygger säkra,
+            testbara lösningar och gillar tydlig kod, bra struktur och stabil leverans.
+            (Söker LIA eller juniorroll – ta kontakt om du vill se mer!)
           </p>
           <div className="hero__links">
             <a className="btn" href="#projects">Se projekt</a>
@@ -22,23 +41,58 @@ export default function App() {
       </header>
 
       <main className="container">
-        <section className="section" id="about">
-          <h2>Om mig</h2>
-          <p>
-            Hej! Jag är Branko – trivs bäst när jag får lösa problem med Java/Spring och React. 
-            Jag håller det enkelt, skriver kod som går att testa och skickar ut ofta. 
-            Vill in i ett lag som gillar ordning och leverans.
-          </p>
-        </section>
+        <section className="section reveal about" id="about">
+  <div className="about__grid">
+    <figure className="about__media">
+      <picture>
+        <source srcSet="/CVbild.jpg" type="image/jpg" />
+        <source srcSet="/me.webp" type="image/webp" />
+        <img
+          src="/me.jpg"
+          alt="Porträtt av Branko Nikolic"
+          width={420}
+          height={420}
+          loading="lazy"
+          className="avatar"
+        />
+      </picture>
+    </figure>
 
-        <section className="section" id="projects">
+    <div className="about__content">
+      <h2>Om mig</h2>
+      <p>
+        Jag heter Branko och jag älskar att lära mig nya saker. 
+        Jag är en lagspelare som gillar att testa, misslyckas snabbt 
+        och förbättra mig längs vägen.
+        Jag söker en LIA där jag får växa som utvecklare, bygga tillsammans med 
+        andra och lära mig de språk och verktyg som teamet använder — oavsett stack.
+      </p>
+
+      <ul className="about__chips" aria-label="Snabbfakta">
+        <li>Java / Spring Boot</li>
+        <li>React / TypeScript</li>
+        
+      </ul>
+
+      <div className="about__actions">
+        <a className="btn" href="#projects">Se projekt</a>
+        <a className="btn btn--outline" href="/BrankoCV2209.pdf" download>
+          Ladda ner CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <section className="section reveal" id="projects">
           <h2>Projekt</h2>
           <div className="grid grid--projects">
             {projects.map((p) => (<ProjectCard key={p.title} project={p} />))}
           </div>
         </section>
 
-       <section className="section" id="skills">
+        <section className="section reveal" id="skills">
           <h2>Tech-stack</h2>
           <ul className="kv">
             <li><strong>Programmering & språk</strong> {skills.programming.join(", ")}</li>
@@ -48,17 +102,34 @@ export default function App() {
             <li><strong>Språk</strong> {skills.languages.join(", ")}</li>
           </ul>
         </section>
-        
       </main>
 
-      <section className="section" id="contact">
-          <h2>Kontakt</h2>
-          <ul className="kv">
-            <li><strong>GitHub</strong> <a href="https://github.com/Brankoov" target="_blank">Brankoov</a></li>
-            <li><strong>E-post</strong> <a href="mailto:branko_nikolic@live.se">branko_nikolic@live.se</a></li>
-            <li><strong>Telefon</strong> 073-732 11 57</li>
-          </ul>
-        </section> 
+      <section className="section reveal" id="contact">
+        <h2>Kontakt</h2>
+        <ul className="kv">
+          <li>
+            <strong>GitHub</strong>{" "}
+            <a href="https://github.com/Brankoov" target="_blank" rel="noopener noreferrer">
+              Brankoov
+            </a>
+          </li>
+          <li>
+            <strong>E-post</strong>{" "}
+            <a id="mail" href="mailto:branko_nikolic@live.se">
+              branko_nikolic@live.se
+            </a>
+            <button
+              type="button"
+              className="btn btn--sm"
+              onClick={() => navigator.clipboard.writeText("branko_nikolic@live.se")}
+              style={{ marginLeft: 8 }}
+            >
+              Kopiera
+            </button>
+          </li>
+          <li><strong>Telefon</strong> 073-732 11 57</li>
+        </ul>
+      </section>
 
       <footer className="footer">
         © {new Date().getFullYear()} Branko. Built with React + Vite.

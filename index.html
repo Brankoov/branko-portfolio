@@ -1,11 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv" data-theme="dark"> 
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Branko – Portfolio</title>
 
+    <!-- SEO / Social -->
+    <meta name="description" content="Branko Nikolic – Java/Spring & React. Bygger säkra, testbara lösningar.">
+    <meta property="og:title" content="Branko – Java & React Developer">
+    <meta property="og:description" content="Projekt, case, kontakt.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Branko Nikolic",
+      "jobTitle":"Software Developer",
+      "knowsAbout":["Java","Spring Boot","React","TypeScript","TDD","REST"],
+      "url":"https://din-domän-här",
+      "sameAs":["https://github.com/Brankoov","https://www.linkedin.com/in/brankonikolic/"],
+      "email":"mailto:branko_nikolic@live.se"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

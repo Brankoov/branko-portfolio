@@ -1,23 +1,78 @@
 import type { Project } from "../data/projects";
-import "./ProjectCard.module.css";
+import styles from "./ProjectCard.module.css";
 
 type Props = { project: Project };
 
 export default function ProjectCard({ project }: Props) {
+  const { title, description, stack, live, repo, url, image } = project;
+
+  // Välj “huvudlänk” för kortet (företrädesvis live, annars repo/url)
+  const primaryHref = live || repo || url;
+
   return (
-    <article className="card">
-      <header className="card__header">
-        <h3 className="card__title">{project.title}</h3>
+    <article className={styles.card}>
+      {image && (
+        <figure className={styles.media}>
+          <img
+            src={image}
+            alt={`${title} – förhandsbild`}
+            loading="lazy"
+            className={styles.thumb}
+          />
+        </figure>
+      )}
+
+      <header className={styles.header}>
+        <h3 className={styles.title}>{title}</h3>
       </header>
-      <p className="card__desc">{project.description}</p>
-      <ul className="card__tags">
-        {project.stack.map((t) => (
-          <li key={t} className="tag">{t}</li>
-        ))}
-      </ul>
-      <a className="card__link" href={project.url} target="_blank" rel="noreferrer">
-        Visa på GitHub →
-      </a>
+
+      <p className={styles.desc}>{description}</p>
+
+      {!!stack?.length && (
+        <ul className={styles.tags} aria-label="Teknikstack">
+          {stack.map((t) => (
+            <li key={t} className={styles.tag}>{t}</li>
+          ))}
+        </ul>
+      )}
+
+      {(live || repo || url) && (
+        <div className={styles.actions}>
+          {live && (
+            <a
+              className={styles.btn}
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live demo ↗
+            </a>
+          )}
+          {repo && (
+            <a
+              className={`${styles.btn} ${styles.btnGhost}`}
+              href={repo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repo ↗
+            </a>
+          )}
+          {!live && !repo && url && (
+            <a
+              className={`${styles.btn} ${styles.btnGhost}`}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Öppna ↗
+            </a>
+          )}
+        </div>
+      )}
+
+      {/* Gör hela kortet klickbart om primaryHref finns */}
+      {primaryHref && <a className={styles.blockLink} href={primaryHref} target="_blank" rel="noopener noreferrer" aria-label={`Öppna ${title}`} />}
     </article>
   );
 }
