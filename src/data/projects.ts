@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Weather Kids Wear",
     description:
-      "Väderdriven rekommendation för barnkläder – React + TypeScript.",
+      "Väderbaserad klädrekommendation för småbarnsföräldrar – hjälper till att välja rätt plagg inför förskolan – byggd med React och TypeScript.",
     stack: ["React", "TypeScript", "Vite"],
     live: "https://kladerforvader.se/",
     repo: "https://github.com/Brankoov/Weatherapp", 
