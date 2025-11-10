@@ -4,10 +4,10 @@ import styles from "./ProjectCard.module.css";
 type Props = { project: Project };
 
 export default function ProjectCard({ project }: Props) {
-  const { title, description, stack, live, repo, url, image } = project;
+  const { title, description, stack, live, repo, repoFrontend, url, image } = project;
 
-  // Välj “huvudlänk” för kortet (företrädesvis live, annars repo/url)
-  const primaryHref = live || repo || url;
+  // Välj “huvudlänk” för hela kortet (företrädesvis live, annars repo, repoFrontend, url)
+  const primaryHref = live || repo || repoFrontend || url;
 
   return (
     <article className={styles.card}>
@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: Props) {
         </ul>
       )}
 
-      {(live || repo || url) && (
+      {(live || repo || repoFrontend || url) && (
         <div className={styles.actions}>
           {live && (
             <a
@@ -48,6 +48,7 @@ export default function ProjectCard({ project }: Props) {
               Live demo ↗
             </a>
           )}
+
           {repo && (
             <a
               className={`${styles.btn} ${styles.btnGhost}`}
@@ -55,10 +56,22 @@ export default function ProjectCard({ project }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Repo ↗
+              Repo  ↗
             </a>
           )}
-          {!live && !repo && url && (
+
+          {repoFrontend && (
+            <a
+              className={`${styles.btn} ${styles.btnGhost}`}
+              href={repoFrontend}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repo (FE) ↗
+            </a>
+          )}
+
+          {!live && !repo && !repoFrontend && url && (
             <a
               className={`${styles.btn} ${styles.btnGhost}`}
               href={url}
@@ -72,7 +85,15 @@ export default function ProjectCard({ project }: Props) {
       )}
 
       {/* Gör hela kortet klickbart om primaryHref finns */}
-      {primaryHref && <a className={styles.blockLink} href={primaryHref} target="_blank" rel="noopener noreferrer" aria-label={`Öppna ${title}`} />}
+      {primaryHref && (
+        <a
+          className={styles.blockLink}
+          href={primaryHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Öppna ${title}`}
+        />
+      )}
     </article>
   );
 }
