@@ -1,12 +1,14 @@
 # Branko Portfolio
 
-Personal developer portfolio built with **React (Vite + TypeScript)**.  
-Deployed to **Azure Static Web Apps** via **GitHub Actions**.
+Personal developer portfolio built with **React (Vite + TypeScript)**. 
+At first deployed with  **Azure Static Web Apps** via **GitHub Actions**.
+Later changed to Vercel deployment.
+> Cloud-hosted React portfolio with CI/CD on Azure/Vercel. Built for LIA/job applications.
 
-> Cloud-hosted React portfolio with CI/CD on Azure. Built for LIA/job applications.
+
 
 ## Live
-- **URL:** https://wonderful-sand-0a2760403.1.azurestaticapps.net/
+- **URL:** https://branko-portfolio.vercel.app/
 
 ## Screenshots
 
