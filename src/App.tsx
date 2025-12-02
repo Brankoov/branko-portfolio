@@ -76,7 +76,7 @@ export default function App() {
 
       <div className="about__actions">
         <a className="btn" href="#projects">Se projekt</a>
-        <a className="btn btn--outline" href="/BrankoCV2209.pdf" download>
+        <a className="btn btn--outline" href="/BrankoCV.pdf" download>
           Ladda ner CV
         </a>
       </div>

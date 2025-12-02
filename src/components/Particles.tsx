@@ -50,12 +50,12 @@ export default function Particles({
     if (!container) return;
 
     // Respektera prefers-reduced-motion
-    const prefersReduced =
+    /**const prefersReduced =
       typeof window !== "undefined" &&
       window.matchMedia &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;*/
 
-    if (disabled || prefersReduced) return;
+    if (disabled) return;
 
     // --- Init renderer ---
     const renderer = new Renderer({

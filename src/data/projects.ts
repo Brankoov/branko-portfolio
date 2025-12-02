@@ -13,64 +13,68 @@ export type Project = {
 // url/ repo/ live valfria.
 
 export const projects: Project[] = [
+  // 1. Routing – TOP LEFT
+  {
+    title: "Routing & Optimization App (Examensarbete – WIP)",
+    description:
+      "Ett examensarbete där jag bygger en molnbaserad fullstack-lösning för ruttoptimering riktad mot yrkeschaufförer. " +
+      "Systemet beräknar optimal ordning för upp till 48 stopp baserat på verklig körtid och innehåller ett dedikerat körläge för mobil med live-navigering, avbockning av stopp och ETA-uppdateringar. " +
+      "Projektet genomförs med agila arbetssätt och inkluderar löpande UX-samarbete kring flöden, användarvänlighet och interaktionsdesign.",
+    stack: [
+      "Java 17 & Spring Boot 3",
+      "PostgreSQL (Supabase & Docker)",
+      "JWT Authentication",
+      "OpenRouteService API",
+      "Custom TSP-algoritmer (NN + 2-Opt)",
+      "React (Vite, TypeScript)",
+      "React-Leaflet",
+      "Docker",
+      "Render + Vercel"
+    ],
+    repo: "https://github.com/Brankoov/routing-app",
+    live: "https://routing-app-green.vercel.app/",
+  },
+
+  // 2. Weather Kids Wear – TOP RIGHT
   {
     title: "Weather Kids Wear",
     description:
-      "Väderbaserad klädrekommendation för småbarnsföräldrar – hjälper till att välja rätt plagg inför förskolan. " +
-      "Byggd med React, TypeScript och PostgreSQL. ACCESS KOD = qwerty1234",
+      "Väderbaserad klädguide för småbarnsföräldrar – visar vad barnet bör ha på sig vid lämning på förskolan. " +
+      "Byggt i ett agilt team med fokus på enkel UX, tydliga användarflöden och snabba iterationer. ACCESS KOD = qwerty1234.",
     stack: ["React", "TypeScript", "Vite", "PostgreSQL"],
     live: "https://kladerforvader.se/",
     repo: "https://github.com/Brankoov/Weatherapp",
     url: "https://kladerforvader.se/",
   },
+
+  // 3. AI Agent – BOTTOM LEFT
+  {
+    title: "Personal AI agent/assistant",
+    description:
+      "En helt offline och privat AI-agent som kör lokalt via en webbaserad chatt. " +
+      "Systemet använder Ollama för lokala LLM-modeller och RAG för att kunna läsa egna filer, kod och anteckningar. " +
+      "Work in progress!",
+    stack: [
+      "Backend: Spring Boot 3 (Java 17), WebFlux, SSE",
+      "Frontend: React, TypeScript, Vite",
+      "AI: Ollama (lokala LLMs) + RAG",
+      "PostgreSQL + pgvector",
+      "Flyway",
+      "Docker"
+    ],
+    repo: "https://github.com/Brankoov/ai-agent",
+    repoFrontend: "https://github.com/Brankoov/ai-agent-ui",
+  },
+
+  // 4. Foodtruck – BOTTOM RIGHT
   {
     title: "Foodtruck webbpage",
     description:
-      "En enkel Foodtruck-hemsida med startsida, om oss och kontaktformulär.",
+      "En enkel men stilren webbplats med startsida, meny, om-oss och kontaktformulär. " +
+      "Del av kursprojekt med UX-designers där vi arbetade iterativt enligt agila metoder.",
     stack: ["React", "TypeScript", "Vercel"],
     live: "https://sandysfoodtruck.vercel.app/",
     repo: "https://github.com/Brankoov/FR_UX_Grupp4",
     url: "https://sandysfoodtruck.vercel.app/",
   },
-  {
-    title: "Personal AI agent/assistant",
-    description:
-      "Det här projektet syftar till att bygga en helt **offline**, **säker** och **personlig AI-agent**. " +
-      "En digital assistent som körs lokalt via en webbaserad chatt-UI och kopplas mot dina egna filer/kod/anteckningar. WORK IN PROGRESS!",
-    stack: [
-      "Backend: Spring Boot 3 (Java 17), WebFlux, SSE",
-      "Frontend: React, TypeScript, Vite",
-      "AI: Ollama (lokala LLMs) + RAG",
-      "Database: PostgreSQL + pgvector",
-      "Migrations: Flyway",
-      "Containerization: Docker",
-      "Embeddings: nomic-embed-text (via Ollama)"
-    ],
-    repo: "https://github.com/Brankoov/ai-agent",
-    repoFrontend: "https://github.com/Brankoov/ai-agent-ui",
-  },
-   {
-    title: "Routing & Optimization App (Examensarbete – WIP)",
-  description:
-    "Ett examensarbete som utvecklar en komplett ruttoptimeringslösning. " +
-    "Användaren kan ange startadress, upp till 30 stopp och en slutadress – " +
-    "systemet geokodar, optimerar ordningen och visar rutten på karta med ETA. " +
-    "Hela lösningen ska köras lokalt med öppna API:er och Docker-containrar." +
-    " WORK IN PROGRESS!",
-  stack: [
-    "Spring Boot (Web, Security, Data JPA, JWT Sessions)",
-    "Flyway (databasmigrationer)",
-    "PostgreSQL (Docker)",
-    "OSRM & VROOM (routing + optimering, Docker)",
-    "Nominatim (geokodning, Docker)",
-    "React (Vite)",
-    "Tailwind CSS / MUI",
-    "React-Leaflet / MapLibre",
-    "JUnit 5",
-    "GitHub Projects (planering)",
-    "Docker Compose (lokal miljö)"
-  ],
-  repo: "https://github.com/Brankoov/routing-app",
-  },
-  
 ];
