@@ -29,9 +29,10 @@ export default function App() {
         <div className="container hero__content">
           <h1>Branko – Utvecklare (Java/Spring • React )</h1>
           <p>
-            Utvecklare med fokus på Java/Spring och React. Jag bygger säkra,
-            testbara lösningar och gillar tydlig kod, bra struktur och stabil leverans.
-            (Söker LIA eller juniorroll – ta kontakt om du vill se mer!)
+            Utvecklare med fokus på Java/Spring och React. 
+            Just nu gör jag min LIA på Softronic och tar examen
+            i slutet av våren. Jag ser fram emot att ta steget ut i 
+            arbetslivet på riktigt.
           </p>
           <div className="hero__links">
             <a className="btn" href="#projects">Se projekt</a>

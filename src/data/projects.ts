@@ -15,33 +15,49 @@ export type Project = {
 export const projects: Project[] = [
   // 1. Routing – TOP LEFT
   {
-    title: "Routing & Optimization App (Examensarbete – WIP)",
+    title: "Ruttoptimeraren (Examensarbete)",
     description:
-      "Ett examensarbete där jag bygger en molnbaserad fullstack-lösning för ruttoptimering riktad mot yrkeschaufförer. " +
-      "Systemet beräknar optimal ordning för upp till 48 stopp baserat på verklig körtid och innehåller ett dedikerat körläge för mobil med live-navigering, avbockning av stopp och ETA-uppdateringar. " +
-      "Projektet genomförs med agila arbetssätt och inkluderar löpande UX-samarbete kring flöden, användarvänlighet och interaktionsdesign.",
+      "Mobilanpassad fullstack-lösning som ersätter papperslistor med digital effektivitet. " +
+      "Backend i Java beräknar optimal körordning via en egenutvecklad hybrid-algoritm (Nearest Neighbor, 2-Opt & Simulated Annealing) för att lösa TSP. " +
+      "Innehåller även ett 'körläge' för mobil med realtidsnavigering.",
     stack: [
       "Java 17 & Spring Boot 3",
-      "PostgreSQL (Supabase & Docker)",
-      "JWT Authentication",
+      "Algoritmer (NN, 2-Opt, SA)",
+      "PostgreSQL (Docker)",
       "OpenRouteService API",
-      "Custom TSP-algoritmer (NN + 2-Opt)",
       "React (Vite, TypeScript)",
-      "React-Leaflet",
-      "Docker",
+      "Leaflet Maps",
       "Render + Vercel"
     ],
     repo: "https://github.com/Brankoov/routing-app",
     live: "https://routing-app-green.vercel.app/",
   },
 
+  {
+    title: "Mafia Game Manager",
+    description:
+      "En interaktiv 'Game Master'-app för sällskapsspelet Maffia. " +
+      "Digitaliserar spelupplevelsen genom att hantera rollutdelning (via 'pass-and-play' med swipe-gester), nattfaser och vinstvillkor.\n" +
+      "Fokus på mobil UX, komplex state-hantering och mjuka animationer.",
+    stack: [
+      "React (Vite)",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "shadcn/ui",
+      "Context API"
+    ],
+    // Fyll i dina länkar här:
+    repo: "https://github.com/Brankoov/mafia-game", 
+    live: "https://mafia-game-alpha.vercel.app/",
+  },
+
   // 2. Weather Kids Wear – TOP RIGHT
   {
     title: "Weather Kids Wear",
     description:
-      "Väderbaserad klädguide för småbarnsföräldrar – visar vad barnet bör ha på sig vid lämning på förskolan. " +
-      "Byggt i ett agilt team med fokus på enkel UX, tydliga användarflöden och snabba iterationer. ACCESS KOD = qwerty1234.",
-    stack: ["React", "TypeScript", "Vite", "PostgreSQL"],
+      "Väderbaserad klädguide för småbarnsföräldrar – visar vad barnet bör ha på sig vid lämning. \n\nGäst-login: qwerty1234",
+    stack: ["React", "TypeScript", "Vite", "PostgreSQL", "Node.js"],
     live: "https://kladerforvader.se/",
     repo: "https://github.com/Brankoov/Weatherapp",
     url: "https://kladerforvader.se/",
@@ -49,7 +65,7 @@ export const projects: Project[] = [
 
   // 3. AI Agent – BOTTOM LEFT
   {
-    title: "Personal AI agent/assistant",
+    title: "Personal AI agent/assistant (Work in progress)",
     description:
       "En helt offline och privat AI-agent som kör lokalt via en webbaserad chatt. " +
       "Systemet använder Ollama för lokala LLM-modeller och RAG för att kunna läsa egna filer, kod och anteckningar. " +

@@ -1,6 +1,6 @@
 import { useTheme } from "../hooks/useTheme";
 
-export default function ThemeToggle() {   // 👈 DEFAULT EXPORT
+export default function ThemeToggle() {   //  DEFAULT EXPORT
   const { theme, toggle } = useTheme();
   return (
     <button
