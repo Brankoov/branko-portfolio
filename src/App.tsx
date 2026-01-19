@@ -62,11 +62,12 @@ export default function App() {
     <div className="about__content">
       <h2>Om mig</h2>
       <p>
-        Jag heter Branko och jag älskar att lära mig nya saker. 
-        Jag är en lagspelare som gillar att testa, misslyckas snabbt 
-        och förbättra mig längs vägen.
-        Jag söker en LIA där jag får växa som utvecklare, bygga tillsammans med 
-        andra och lära mig de språk och verktyg som teamet använder — oavsett stack.
+        Jag heter Branko och jag älskar att lära mig nya saker.
+        Jag är en lagspelare som gillar att testa, misslyckas snabbt
+        och förbättra mig längs vägen. 
+        Just nu gör jag min LIA på Softronic, 
+        men till sommaren tar jag examen och söker en 
+        junior roll där jag får bygga värde tillsammans med andra — oavsett stack.
       </p>
 
       <ul className="about__chips" aria-label="Snabbfakta">
