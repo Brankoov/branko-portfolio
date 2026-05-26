@@ -27,12 +27,11 @@ export default function App() {
           cameraDistance={15}
         />
         <div className="container hero__content">
-          <h1>Branko – Utvecklare (Java/Spring • React )</h1>
+          <h1>Branko – Utvecklare (Next.js/React • Java/Spring)</h1>
           <p>
-            Utvecklare med fokus på Java/Spring och React. 
-            Just nu gör jag min LIA på Softronic och tar examen
-            i slutet av våren. Jag ser fram emot att ta steget ut i 
-            arbetslivet på riktigt.
+            Systemutvecklare med en stabil grund i Java och Spring Boot, som just nu 
+            fokuserar mest på att bygga och förvalta applikationer i React och Next.js. Den här 
+            sidan är min digitala hubb för projekt jag pillar med vid sidan av.
           </p>
           <div className="hero__links">
             <a className="btn" href="#projects">Se projekt</a>
@@ -62,25 +61,25 @@ export default function App() {
     <div className="about__content">
       <h2>Om mig</h2>
       <p>
-        Jag heter Branko och jag älskar att lära mig nya saker.
-        Jag är en lagspelare som gillar att testa, misslyckas snabbt
-        och förbättra mig längs vägen. 
-        Just nu gör jag min LIA på Softronic, 
-        men till sommaren tar jag examen och söker en 
-        junior roll där jag får bygga värde tillsammans med andra — oavsett stack.
+        Jag heter Branko. Min utvecklingsresa drivs av nyfikenhet och en vilja att hela 
+        tiden lära mig nya saker. Som utvecklare gillar jag att ta min tid och vara noggrann – 
+        att bygga robust och stabil kod som håller över tid är väldigt viktigt för mig.
       </p>
 
       <ul className="about__chips" aria-label="Snabbfakta">
+        <li>Next.js / React / TypeScript</li>
         <li>Java / Spring Boot</li>
-        <li>React / TypeScript</li>
-        
+        <li>SQL (MSSQL / PostgreSQL)</li>
       </ul>
 
       <div className="about__actions">
         <a className="btn" href="#projects">Se projekt</a>
-        <a className="btn btn--outline" href="/BrankoCV.pdf" download>
+        <button 
+          className="btn btn--outline" 
+          onClick={() => alert("Håller på att uppdatera mitt CV för tillfället, återkom gärna snart!")}
+        >
           Ladda ner CV
-        </a>
+        </button>
       </div>
     </div>
   </div>

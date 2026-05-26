@@ -1,21 +1,16 @@
 
 export const skills = {
-  programming: ["Java", "JavaScript", "TypeScript", "HTML", "CSS"],
-  databases: ["MySQL", "PostgreSQL", "MongoDB"],
-  frameworks: [
-    "Spring Boot (Web, Data JPA, Security)",
-    "React",
-    "RESTful API design",
-    "JUnit 5",
-  ],
+  programming: ["TypeScript", "JavaScript", "Java", "HTML / CSS"],
+  frameworks: ["React", "Next.js", "Spring Boot", "RESTful API design", "Jest"],
+  databases: ["MSSQL", "PostgreSQL", "MySQL", "Redis"],
   tools: [
-    "Git & GitHub",
-    "CI/CD (GitHub Actions)",
-    "Docker",
-    "IntelliJ IDEA",
-    "VS Code",
-    "Maven/Gradle",
-    "Swagger",
+    "Git / GitLab CI/CD", 
+    "Docker", 
+    "OpenShift", 
+    "ArgoCD", 
+    "Postman / Swagger", 
+    "Elasticsearch", 
+    "Jira / Confluence"
   ],
-  languages: ["Svenska", "Engelska", "Serbiska"],
+  languages: ["Svenska", "Engelska", "Serbiska"]
 };

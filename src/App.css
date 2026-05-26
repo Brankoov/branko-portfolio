@@ -148,3 +148,17 @@ html { scroll-behavior: smooth; }
 }
 .section + .section { margin-top: 16px; }
 .avatar { object-position: 50% 35%; }
+
+/* Ser till att varje rad i listan beter sig som en flexbox */
+.kv li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px; /* Valfritt: ger lite skönare avstånd mellan raderna */
+}
+
+/* Ger rubriken en fast bredd så att allt till höger linjerar perfekt */
+.kv li strong {
+  min-width: 180px; 
+  flex-shrink: 0;   /* Hindrar rubriken från att klämmas ihop */
+  display: inline-block;
+}
